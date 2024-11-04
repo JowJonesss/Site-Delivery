@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicite Entrega</title>
+    <style>
+        body{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background-image: url(assets/wal.png);
+            background-size: 100%;
+            color: white;
+        }
+
+        div.menu{
+            top: 30px;
+            width: 54%;
+            height: 100;
+            text-align: right;
+        }
+        .menu a{
+           color: rgb(255, 255, 255);
+           text-decoration: none;
+           font-weight: bold;
+           margin-right: 30px;
+           height: 100%;
+        }
+
+        .box{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            border-radius: 15px;
+            width: 30%;
+        }
+        fieldset{
+            border: 3px solid #da7a2e ;
+            border-radius: 3px;
+        }
+        legend{
+            border: 3px solid #da7a2e;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .inputBox{
+            position: relative;
+        }
+        .inputUser{
+            background:none;
+            border: none;
+            border-bottom: 1px solid white;
+            outline: none;
+            color: white;
+            font-size: 15px;
+            width: 100%;
+            letter-spacing: 1px;
+        }
+        .labelInput{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            pointer-events: none;
+            transition: .5s;
+        }
+        .inputUser:focus ~ .labelInput,
+        .inputUser:valid ~ .labelInput{
+            top: -20px;
+            font-size: 14px;
+            color: #da7a2e;
+        }
+        #submit{
+            background-color: #da7a2e;
+            border: none;
+            width: 100%;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        #submit:hover{
+            background-color: #704018;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <a href="index.html">Voltar</a>
+    </div>
+    <div class="box">
+        <form action="">
+            <fieldset>
+                <legend><b>Solicite Entrega</b></legend>
+                <br>
+                <div class="inputBox">
+                    <input type="text" name="nome" id="nome" class="inputUser" required>
+                    <label for="nome" class="labelInput">Endereço de Retirada</label>
+                    <br><br><br>
+                <div class="inputBox">
+                    <input type="text" name="nome" id="nome" class="inputUser" required>
+                    <label for="nome" class="labelInput">Endereço de Entrega</label>
+                    <br><br><br>
+                </div>
+                <div class="inputBox">
+                    <input type="text" name="nome" id="nome" class="inputUser" required>
+                    <label for="nome" class="labelInput">Produto</label>
+                    <br><br><br>
+                </div>
+                <div class="inputBox">
+                    <input type="text" name="nome" id="nome" class="inputUser" required>
+                    <label for="nome" class="labelInput">Peso Produto</label>
+                    <br><br><br>
+                </div>
+                <input type="submit" name="submit" id="submit">
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
